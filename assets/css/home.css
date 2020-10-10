@@ -1,0 +1,73 @@
+body{
+    text-align: center;
+    margin:10px;
+}
+#todo h1{
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 50px;
+    margin-top: 30px;
+    padding:10px;
+    background-color: aquamarine;
+}
+form{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30px;
+}
+#todo{
+    position: static;
+    background: linear-gradient(to right, #134e5e, #71b280);
+    width:30%;
+    height:350px;
+    margin:auto;
+    border-radius: 0 0 50% 50%;
+}
+button{
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 25px;
+}
+input{
+    padding: 5px;
+    font-size: 20px;
+}
+body{
+    background: linear-gradient(to right, #56ab2f, #a8e063);
+}
+.tasks{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    background-color:palevioletred;
+    width:50%;
+    margin:auto;
+    padding:10px;
+    text-align:left;
+    margin-top:20px;
+}
+.box{
+    background: linear-gradient(to right, #56ab2f, #a8e063);
+    padding:20px;
+    border:3px black solid;
+    margin:5px;
+}
+input[type=checkbox] {
+    transform: scale(1.5);
+    margin-right:10px;
+    margin-left: 1px;
+}
+.label {
+    color: white;
+    padding: 8px;
+    text-align: right;
+    margin-right:0px;
+    float:right;
+    background-color: #4CAF50;
+  }
+.taskdesc{
+    display: inline-block;
+}
+button{
+    margin-top:20px;
+    padding:5px;
+}
+#del{
+    text-align:center;
+}
