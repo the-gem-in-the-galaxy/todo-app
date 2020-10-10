@@ -1,0 +1,80 @@
+<head>
+    <title>
+        <%=title%>
+    </title>
+    <link rel="stylesheet" href="css/home.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div id="todo">
+    <h1>TO DO LIST</h1>
+    <form action="/create-task" method="POST">
+        <label for="desc">Description</label>
+        <input type="text" id="desc" name="desc"><br>
+
+        <label for="category">Category</label>
+        <input list="category" name="category" placeholder="choose a category">
+        <datalist id="category">
+        <option value="College">
+        <option value="Extra">
+        <option value="Health">
+        </datalist>
+        <br>
+
+        <label for="duedate">Due date:</label>
+        <input type="date" id="duedate" name="duedate">
+        <br>
+        <button type="submit">
+            Add Task
+        </button>
+    </form>
+    </div>
+    <div class="tasks">
+        <form method="POST" action="/delete-task">
+          <%for(let i of task_list){%> 
+            <div class="box">
+            
+            <input type="checkbox" name="checked" value="<%=i._id%>"  class="task">
+            
+            
+            <div class="taskdesc">
+            <label for="<%=i.desc%>"><%=i.desc%></label><br>
+            </div>
+            <span class="label"><%=i.category%></span>
+
+            <%var str=i.duedate;
+              str=str.split('-');
+              var months=["Jan","Feb","March","April","May","June","July","Aug","Sep","Oct","Nov","Dec"];
+              var monthindex=parseInt(str[1]);
+              var month=months[monthindex-1];
+              var year=str[0];
+              var day=str[2];
+              var date=day+" "+month+" "+year;
+            %>
+            <div class="taskdate"><i class="fa fa-calendar" aria-hidden="true"></i>
+                <%=date%></div>
+            </div>
+        <%}%>
+        <div id="del">
+        <button type="submit">
+            DELETE TASK
+         </button>
+        </div>
+    </div>
+    </form>
+     <!-- <script>
+        function myFunction() {
+            var str="";
+            console.log("hi");
+            var checkedBoxes = document.querySelectorAll('input[type=checkbox]:checked');
+            console.log("&",checkedBoxes);
+            for(var i=0;i<checkedBoxes.length;i++){
+                    str+=checkedBoxes[i].id+"~";
+                    console.log("))",str);
+            }
+            console.log(window);
+            document.getElementById("del").submit();
+        }
+        </script> -->
+</body>
