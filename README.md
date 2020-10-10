@@ -10,5 +10,5 @@ To start server
 `npm start`
 
 Output
-![screenshot]()
+![](https://github.com/queenofnothing/todo-app/blob/main/assets/css/Screenshot%202020-10-11%20at%2012.18.25%20AM.png)
 
