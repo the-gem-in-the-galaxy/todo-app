@@ -1,13 +1,1 @@
-# Python3 program to illustrate
-# hex() function
-
-print("The hexadecimal form of 23 is "
-							+ hex(23))
-							
-print("The hexadecimal form of the "
-	"ascii value is 'a' is " + hex(ord('a')))
-	
-print("The hexadecimal form of 3.9 is "
-						+ float.hex(3.9))
-
-
+A cypherpunk is any individual advocating widespread use of strong cryptography and privacy-enhancing technologies as a route to social and political change. Originally communicating through the Cypherpunks electronic mailing list, informal groups aimed to achieve privacy and security through proactive use of cryptography. Cypherpunks have been engaged in an active movement since at least the late 1980s.
